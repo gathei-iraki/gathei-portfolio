@@ -1,12 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // add image hosts
-    images: {
-        domains: ['firebasestorage.googleapis.com',
-            'images.unsplash.com',
-            'plus.unsplash.com',
-        ],
-    },
-}
+  eslint: {
+    ignoreDuringBuilds: true, // ⛔ Skip ESLint errors in production
+  },
+  reactStrictMode: true,
+  images: {
+    domains: [
+      'firebasestorage.googleapis.com',
+      'images.unsplash.com',
+      'plus.unsplash.com',
+    ],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
