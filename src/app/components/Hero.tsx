@@ -19,7 +19,7 @@ const Hero = () => {
             <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1 shadow-2xl">
               <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                  src="./sly3.jpg"
                   alt="Professional Profile"
                   className="w-full h-full object-cover rounded-full"
                 />
@@ -30,7 +30,7 @@ const Hero = () => {
           {/* Name and Title */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Alex Johnson
+              Silvia Gathei
             </span>
           </h1>
 

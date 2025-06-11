@@ -4,50 +4,68 @@ const Resume = () => {
   const education = [
     {
       degree: "Bachelor of Science in Computer Science",
-      school: "University of Technology",
-      year: "2020-2024",
-      gpa: "3.8/4.0",
-      relevant: ["Data Structures", "Algorithms", "Cybersecurity", "Software Engineering"]
+      school: "University of Nairobi",
+      year: "2020-2025",
+      relevant: ["Data Structures", "Networks", "Software Engineering"]
     },
     {
-      degree: "Associate Degree in Information Technology",
-      school: "Community College",
-      year: "2018-2020",
-      gpa: "3.9/4.0",
-      relevant: ["Network Security", "Database Management", "Web Development"]
+      degree: "Web Development Certificate ",
+      school: "Ubunifu College",
+      year: "2023",
+      relevant: ["HTML", "CSS", "JavaScript", "PHP"]
+    },
+
+     {
+      degree: "Software Development Certificate ",
+      school: "Moringa School",
+      year: "2020",
+      relevant: ["HTML", "CSS", "JavaScript"]
     }
+
+
   ];
+
+
 
   const experience = [
     {
-      title: "Junior Software Developer",
-      company: "TechCorp Solutions",
-      period: "June 2023 - Present",
+      title: "FrontEnd Web Developer",
+      company: "Bafunde",
+      period: "Nov 2024 - Present",
       responsibilities: [
-        "Developed and maintained web applications using React, Node.js, and MongoDB",
-        "Implemented security protocols and conducted vulnerability assessments",
-        "Collaborated with cross-functional teams to deliver high-quality software solutions",
-        "Participated in code reviews and maintained coding standards"
+        "Designing the new version of the ICPAK and MULA site.",
+        "Crafting coherently designed websites using responsive techniques to enhance user experience.",
+        "Assisted in the successful deployment of solutions for clients.",
       ]
     },
     {
-      title: "IT Support Intern",
-      company: "Digital Innovations Inc.",
-      period: "Summer 2022",
+      title: "Intern",
+      company: "Iosoft Solutions.",
+      period: "2023",
       responsibilities: [
-        "Provided technical support for 200+ employees",
-        "Assisted in network maintenance and security updates",
-        "Documented IT procedures and created user guides",
-        "Helped implement new security policies"
+        "Implemented efficient database management using XAMPP and MySQL, in addition to developing PHP scripts for seamless data extraction.",
+        "Developed interactive graph visualizations by incorporating the Google Charts library into JavaScript programming.",
+        "Assisted in the successful deployment of ERP solutions for clients.",
       ]
-    }
+    },
+
+      {
+      title: "Business Applications Engineer",
+      company: "Computer Revolution Africa Group.",
+      period: "2020-2022",
+      responsibilities: [
+        "Implemented efficient database management using XAMPP and MySQL, in addition to developing PHP scripts for seamless data extraction.",
+        "Developed interactive graph visualizations by incorporating the Google Charts library into JavaScript programming.",
+        "Assisted in the successful deployment of ERP solutions for clients.",
+      ]
+    },
   ];
 
   const certifications = [
-    "CompTIA Security+ (2023)",
-    "AWS Cloud Practitioner (2023)",
-    "Google IT Support Professional Certificate (2022)",
-    "Certified Ethical Hacker (CEH) - In Progress"
+    "Jim Leech Mastercard Foundation Fellowship (2025)",
+    "Algorand Blockchain Hackathon (2024)",
+    "Microsoft Power Platform Functional Consultant (PL 200) (2022)",
+    "United Nations Millenium Fellowship (2022)"
   ];
 
   const skills = {
@@ -55,7 +73,7 @@ const Resume = () => {
     "Web Technologies": ["React", "Node.js", "Express", "HTML5", "CSS3", "MongoDB"],
     "Security Tools": ["Wireshark", "Nmap", "Metasploit", "Burp Suite", "OWASP ZAP"],
     "Cloud & DevOps": ["AWS", "Docker", "Git", "Jenkins", "Linux"],
-    "Other": ["Agile/Scrum", "Project Management", "Technical Writing"]
+    "Other": ["Agile/Scrum",  "Technical Writing"]
   };
 
   return (
@@ -64,10 +82,7 @@ const Resume = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Resume</h2>
           <p className="text-xl text-gray-600 mb-8">My academic background, experience, and skills</p>
-          <button className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
-            <Download className="h-4 w-4" />
-            Download PDF
-          </button>
+         
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -82,7 +97,7 @@ const Resume = () => {
                 <div key={index} className="bg-gray-50 rounded-lg p-6 mb-4">
                   <h4 className="font-semibold text-lg text-gray-900">{edu.degree}</h4>
                   <p className="text-blue-600 font-medium">{edu.school}</p>
-                  <p className="text-gray-600">{edu.year} | GPA: {edu.gpa}</p>
+                  <p className="text-gray-600">{edu.year} </p>
                   <div className="mt-3">
                     <p className="text-sm text-gray-700 font-medium mb-2">Relevant Coursework:</p>
                     <div className="flex flex-wrap gap-2">

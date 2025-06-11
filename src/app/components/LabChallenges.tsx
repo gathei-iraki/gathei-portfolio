@@ -3,93 +3,64 @@ import { Shield, Target, Zap, Lock } from "lucide-react";
 const LabChallenges = () => {
   const challenges = [
     {
-      title: "SQL Injection Vulnerability Assessment",
-      category: "Web Security",
+      title: "Network Traffic Analysis",
+      category: "Network Security",
       difficulty: "Intermediate",
       icon: <Shield className="h-6 w-6" />,
-      problem: "Identify and exploit SQL injection vulnerabilities in a web application login system to gain unauthorized access to user data.",
+      problem: "Exploring the principles of network traffic analysis using Wireshark and TCP dump",
       approach: [
-        "Analyzed the login form for potential injection points",
-        "Used Burp Suite to intercept and modify HTTP requests",
-        "Tested various SQL injection payloads",
-        "Exploited union-based injection to extract database information"
+        "Using Tcpdump for intercepting Network Traffic.",
+        "Interrogating Network Traffic With Capture and Display Filters",
+        "Using Wireshark for intercepting and analyzing Network Traffic.",
       ],
-      tools: ["Burp Suite", "SQLMap", "MySQL", "Python"],
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop",
+      tools: ["Tcpdump", "Wireshark"],
+      image: "https://plus.unsplash.com/premium_photo-1682145181120-73cfdfc8a36d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmV0d29ya3xlbnwwfHwwfHx8MA%3D%3D",
       keyLessons: [
-        "Importance of parameterized queries",
-        "Input validation and sanitization",
-        "Principle of least privilege for database access",
-        "Real-world impact of SQL injection attacks"
+        " Traffic patterns analysis.",
+        "Anomaly detection."
       ],
-      outcome: "Successfully identified 3 injection points and extracted sensitive user data, demonstrating the critical need for secure coding practices."
-    },
+      outcome: "Successfully carrying out real packet captures and applying filters in Wireshark and tcpdump, gained practical insights into traffic patterns, anomaly detection, and the layered structure ofnetwork communications."},
     {
-      title: "Network Penetration Testing Lab",
+      title: "Web Requests Lab",
       category: "Network Security",
       difficulty: "Advanced",
       icon: <Target className="h-6 w-6" />,
-      problem: "Conduct a comprehensive penetration test on a simulated corporate network to identify vulnerabilities and potential attack vectors.",
+      problem: "Exploration of HTTP web requests, emphasizing the GET and POST methods",
       approach: [
-        "Performed network reconnaissance using Nmap",
-        "Identified open ports and running services",
-        "Exploited SMB vulnerabilities for lateral movement",
-        "Escalated privileges using kernel exploits"
+        "Exploring HTTP GET Requests using cURL",
+        "Using Browser Tools to analyze HTTP Requests and Responses",
+        "Exploring HTTP GET Requests using Browser Dev tools"
       ],
-      tools: ["Nmap", "Metasploit", "Wireshark", "John the Ripper", "Hydra"],
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=250&fit=crop",
+      tools: ["cURL", "Browser Dev tools"],
+      image: "https://images.unsplash.com/photo-1746292183209-682c89231b21?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aHR0cHxlbnwwfHwwfHx8MA%3D%3D",
       keyLessons: [
-        "Methodology of penetration testing",
-        "Importance of network segmentation",
-        "Regular security updates and patch management",
-        "Multi-layered security approach"
+        "HTTP request structures",
+        "HTTP session management",
+        "Data Transimission Protocols"
       ],
-      outcome: "Achieved full domain compromise within 4 hours, documenting 15+ vulnerabilities and providing remediation recommendations."
+      outcome: "Enhanced my understanding of how clients and servers interact over the web. By dissecting GET and POST methods using Browser DevTools and cURL, I gained valuable insights into request structures, data transmission, and session management."
     },
     {
-      title: "Reverse Engineering Malware Sample",
-      category: "Malware Analysis",
-      difficulty: "Expert",
+      title: " DNS Protocols and Records",
+      category: "Network",
+      difficulty: "Beginner",
       icon: <Zap className="h-6 w-6" />,
-      problem: "Analyze a suspected malware binary to understand its functionality, identify indicators of compromise, and develop detection signatures.",
+      problem: "Exploring DNS concepts, including domain hierarchy, record types, and the DNS query process.",
       approach: [
-        "Set up isolated analysis environment",
-        "Performed static analysis using disassemblers",
-        "Conducted dynamic analysis with debuggers",
-        "Identified C2 communication patterns"
+        "Understanding Domain Hierarchy",
+        "Understanding DNS Record Types",
+        "Understanding DNS Query Process"
       ],
-      tools: ["IDA Pro", "x64dbg", "Process Monitor", "Wireshark", "YARA"],
+      tools: ["Browser dev tools"],
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=250&fit=crop",
       keyLessons: [
-        "Malware analysis techniques and tools",
-        "Understanding of assembly language",
-        "Network traffic analysis for C2 detection",
-        "Creating effective YARA rules"
+        "Domain Hierarchy",
+        "DNS Record Types",
+        "DNS Query Process"
       ],
-      outcome: "Identified trojan functionality, extracted 5 IoCs, and created detection rules that were integrated into the SOC environment."
-    },
-    {
-      title: "Cryptographic Protocol Implementation",
-      category: "Cryptography",
-      difficulty: "Intermediate",
-      icon: <Lock className="h-6 w-6" />,
-      problem: "Implement a secure communication protocol using RSA encryption and digital signatures, then test for potential vulnerabilities.",
-      approach: [
-        "Designed custom encryption protocol",
-        "Implemented RSA key generation and management",
-        "Added digital signature verification",
-        "Tested against known cryptographic attacks"
-      ],
-      tools: ["Python", "OpenSSL", "Cryptography Library", "SageMath"],
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop",
-      keyLessons: [
-        "Proper implementation of cryptographic algorithms",
-        "Key management best practices",
-        "Common cryptographic vulnerabilities",
-        "Importance of using established libraries"
-      ],
-      outcome: "Successfully created a secure protocol that withstood standard attacks, with detailed documentation of implementation choices."
+      outcome: "An understanding of the domain hierarchy and various DNS record types,how DNS queries are resolved in real-world scenarios."
     }
+   
   ];
 
   const getDifficultyColor = (difficulty: string) => {

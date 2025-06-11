@@ -3,45 +3,41 @@ import { ExternalLink, Github, Eye } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Security Platform",
-      description: "A full-stack e-commerce application with advanced security features including two-factor authentication, encrypted payment processing, and real-time fraud detection.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe API", "JWT", "bcrypt"],
+      title: "Mula Social Investments",
+      description: "Designed and implemented a digital wallet solution tailored to the needs of Mula Social Investments, enabling individuals and businesses to manage finances, grow savings, and reinvest effectively.",
+      technologies: ["React", "Node.js", "MongoDB", "Daraja API", "JWT", "bcrypt"],
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
-      github: "https://github.com/alexjohnson/ecommerce-security",
-      live: "https://secure-shop-demo.netlify.app",
+      github: "https://www.mulagroups.com/",
+      live: "https://www.mulagroups.com/",
       features: [
-        "Secure payment processing with Stripe",
-        "Two-factor authentication",
-        "Real-time fraud detection",
+        "Secure payment processing with Mpesa",
+        "Financial tracking and reporting functions",
+        "Enhancing operational efficiency and financial management",
         "Encrypted user data storage"
       ]
     },
     {
-      title: "Network Vulnerability Scanner",
-      description: "A Python-based network scanning tool that identifies common vulnerabilities and provides detailed security reports for network administrators.",
-      technologies: ["Python", "Nmap", "Scapy", "Flask", "SQLite", "Chart.js"],
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=300&fit=crop",
-      github: "https://github.com/alexjohnson/network-scanner",
+      title: "Bariki Fundraising Platform",
+      description: "A decentralized fundraising platform that utilizes Algorand crypto currency for secure, transparent transactions. ",
+      technologies: ["Python", "Powershell", "JavaScript", "Algorand Blockchain"],
+      image: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      github: "https://github.com/SenZmaKi/Bariki",
       live: null,
       features: [
-        "Automated port scanning",
-        "Vulnerability assessment",
-        "Detailed reporting dashboard",
-        "Scheduled scanning capabilities"
+        "Donating and managing funds efficiently",
+        "leveraging block chain technology to ensure trust and accountability in fundraising processes"
+       
       ]
     },
     {
-      title: "Task Management PWA",
-      description: "A progressive web application for task management with offline capabilities, real-time collaboration, and advanced analytics for productivity tracking.",
+      title: "Music-Interactive LED Strip with Arduino",
+      description: "An LED strip that synchronizes light patterns with music using an Arduino microcontroller.",
       technologies: ["React", "Service Workers", "IndexedDB", "Socket.io", "Express", "PostgreSQL"],
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
-      github: "https://github.com/alexjohnson/task-manager-pwa",
-      live: "https://productivity-tracker-pwa.herokuapp.com",
+      image: "https://images.unsplash.com/photo-1603732551658-5fabbafa84eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXJkdWlub3xlbnwwfHwwfHx8MA%3D%3D",
+      github: "https://github.com/gathei-iraki/music-reactive-LED-strip-with-arduino",
+      live: "https://github.com/gathei-iraki/music-reactive-LED-strip-with-arduino",
       features: [
-        "Offline functionality",
-        "Real-time collaboration",
-        "Advanced analytics",
-        "Cross-platform compatibility"
+        "Creating dynamic lighting effects that respond to audio input."
       ]
     }
   ];
