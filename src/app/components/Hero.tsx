@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
           {/* Profile Image */}
-          <div className="mb-8">
+          <div className="mb-8 mt-16">
             <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1 shadow-2xl">
               <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
                 <img
