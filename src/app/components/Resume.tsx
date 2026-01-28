@@ -1,183 +1,235 @@
+"use client";
+import { useState, useEffect } from "react";
 import { GraduationCap, Briefcase, Award, Code, Download } from "lucide-react";
 
+const Counter = ({ end, label }: { end: number; label: string }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const duration = 1500;
+    const increment = end / (duration / 16);
+
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= end) {
+        setCount(end);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+
+    return () => clearInterval(timer);
+  }, [end]);
+
+  return (
+    <div className="text-center">
+      <p className="text-3xl font-bold text-blue-600">{count}+</p>
+      <p className="text-sm text-gray-500">{label}</p>
+    </div>
+  );
+};
+
 const Resume = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   const education = [
     {
-      degree: "Bachelor of Science in Computer Science",
+      degree: "BSc Computer Science",
       school: "University of Nairobi",
-      year: "2020-2025",
-      relevant: ["Data Structures", "Networks", "Software Engineering"]
+      year: "2020 – 2025",
     },
     {
-      degree: "Web Development Certificate ",
+      degree: "Web Development Certificate",
       school: "Ubunifu College",
       year: "2023",
-      relevant: ["HTML", "CSS", "JavaScript", "PHP"]
     },
-
-     {
-      degree: "Software Development Certificate ",
+    {
+      degree: "Software Development Certificate",
       school: "Moringa School",
       year: "2020",
-      relevant: ["HTML", "CSS", "JavaScript"]
-    }
-
-
+    },
   ];
-
-
 
   const experience = [
     {
-      title: "FrontEnd Web Developer",
-      company: "Bafunde",
-      period: "Nov 2024 - Present",
+      title: "Frontend Web Developer",
+      company: "RentFlow360 (USA, Remote)",
+      period: "Oct 2025 – Nov 2025",
       responsibilities: [
-        "Designing the new version of the ICPAK and MULA site.",
-        "Crafting coherently designed websites using responsive techniques to enhance user experience.",
-        "Assisted in the successful deployment of solutions for clients.",
-      ]
+        "Designed a modern property management system with a responsive UI.",
+        "Integrated RESTful APIs for real-time functionality.",
+        "Built a back-office admin interface to streamline workflows.",
+      ],
     },
     {
-      title: "Intern",
-      company: "Iosoft Solutions.",
-      period: "2023",
+      title: "Frontend Web Developer",
+      company: "Truride — Nairobi, Kenya",
+      period: "May 2025 – Aug 2025",
       responsibilities: [
-        "Implemented efficient database management using XAMPP and MySQL, in addition to developing PHP scripts for seamless data extraction.",
-        "Developed interactive graph visualizations by incorporating the Google Charts library into JavaScript programming.",
-        "Assisted in the successful deployment of ERP solutions for clients.",
-      ]
+        "Redesigned the company website with a modern mobile-first interface.",
+        "Integrated APIs and dynamic features.",
+        "Built internal tools to optimize operations.",
+      ],
     },
-
-      {
-      title: "Business Applications Engineer",
-      company: "Computer Revolution Africa Group.",
-      period: "2020-2022",
+    {
+      title: "Frontend Web Developer",
+      company: "Bafunde — Nairobi, Kenya",
+      period: "Nov 2024 – May 2025",
       responsibilities: [
-        "Implemented efficient database management using XAMPP and MySQL, in addition to developing PHP scripts for seamless data extraction.",
-        "Developed interactive graph visualizations by incorporating the Google Charts library into JavaScript programming.",
-        "Assisted in the successful deployment of ERP solutions for clients.",
-      ]
+        "Developed new ICPAK & MULA websites with improved performance.",
+        "Enhanced UI/UX across devices.",
+        "Supported deployment of client solutions.",
+      ],
+    },
+    {
+      title: "Business Applications Engineer",
+      company: "Computer Revolution Africa Group",
+      period: "Sep 2020 – Aug 2022",
+      responsibilities: [
+        "Automated workflows using Microsoft Power Platform.",
+        "Managed Microsoft 365 environments.",
+        "Deployed Azure cloud infrastructure for clients.",
+      ],
     },
   ];
 
   const certifications = [
-    "Jim Leech Mastercard Foundation Fellowship (2025)",
-    "Algorand Blockchain Hackathon (2024)",
-    "Microsoft Power Platform Functional Consultant (PL 200) (2022)",
-    "United Nations Millenium Fellowship (2022)"
+    "CIPIT Data Protection Certificate – Strathmore University (2025)",
+    "Cloud & Network Security Certificate – Cybershujaa (2025)",
+    "Microsoft Power Platform Functional Consultant (PL-200)",
   ];
 
   const skills = {
-    "Programming Languages": ["JavaScript", "Python", "Java", "C++", "SQL"],
-    "Web Technologies": ["React", "Node.js", "Express", "HTML5", "CSS3", "MongoDB"],
-    "Security Tools": ["Wireshark", "Nmap", "Metasploit", "Burp Suite", "OWASP ZAP"],
-    "Cloud & DevOps": ["AWS", "Docker", "Git", "Jenkins", "Linux"],
-    "Other": ["Agile/Scrum",  "Technical Writing"]
+    Languages: ["JavaScript", "TypeScript", "Node.js"],
+    Frontend: ["React", "Next.js", "Tailwind CSS"],
+    Backend: ["Django", "REST APIs"],
+    Cloud: ["AWS", "Azure"],
+    "Power Platform": ["Power Apps", "Power Automate", "Power BI"],
+    Databases: ["PostgreSQL", "MySQL"],
   };
 
   return (
-    <section id="resume" className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Resume</h2>
-          <p className="text-xl text-gray-600 mb-8">My academic background, experience, and skills</p>
-         
+    <section id="resume" className="py-24 bg-gradient-to-b from-white to-gray-50">
+  <div className="max-w-6xl mx-auto px-6">
+
+    {/* HEADER */}
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-gray-900 mb-4">Resume</h2>
+      <p className="text-gray-600 mb-8">Experience, education & technical expertise</p>
+
+      <div className="flex justify-center gap-10 mb-10">
+        <Counter end={5} label="Years Experience" />
+        <Counter end={15} label="Projects Built" />
+        <Counter end={6} label="Certifications" />
+      </div>
+
+      <a
+        href="/Silvia-Gathei-CV.pdf"
+        download
+        className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700 transition"
+      >
+        <Download size={18} /> Download CV
+      </a>
+    </div>
+
+    {/* ROW 1 — EDUCATION & EXPERIENCE */}
+    <div className="grid lg:grid-cols-2 gap-16 mb-20">
+
+      {/* Education */}
+      <div>
+        <h3 className="flex items-center gap-3 text-2xl font-semibold mb-6">
+          <GraduationCap className="text-blue-600" /> Education
+        </h3>
+        <div className="space-y-5">
+          {education.map((edu, i) => (
+            <div key={i} className="p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
+              <h4 className="font-semibold text-gray-900">{edu.degree}</h4>
+              <p className="text-blue-600 font-medium">{edu.school}</p>
+              <p className="text-gray-500 text-sm">{edu.year}</p>
+            </div>
+          ))}
         </div>
+      </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Education */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="flex items-center gap-2 text-2xl font-semibold text-gray-900 mb-6">
-                <GraduationCap className="h-6 w-6 text-blue-600" />
-                Education
-              </h3>
-              {education.map((edu, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6 mb-4">
-                  <h4 className="font-semibold text-lg text-gray-900">{edu.degree}</h4>
-                  <p className="text-blue-600 font-medium">{edu.school}</p>
-                  <p className="text-gray-600">{edu.year} </p>
-                  <div className="mt-3">
-                    <p className="text-sm text-gray-700 font-medium mb-2">Relevant Coursework:</p>
-                    <div className="flex flex-wrap gap-2">
-                      {edu.relevant.map((course, i) => (
-                        <span key={i} className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
-                          {course}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+      {/* Experience */}
+      <div>
+        <h3 className="flex items-center gap-3 text-2xl font-semibold mb-6">
+          <Briefcase className="text-blue-600" /> Work Experience
+        </h3>
+        <div className="space-y-5">
+          {experience.map((exp, i) => (
+            <div key={i} className="border border-gray-100 rounded-xl shadow-sm bg-white overflow-hidden">
+              <button
+                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                className="w-full text-left p-6 hover:bg-gray-50 transition"
+              >
+                <h4 className="font-semibold text-gray-900">{exp.title}</h4>
+                <p className="text-blue-600 font-medium">{exp.company}</p>
+                <p className="text-gray-500 text-sm">{exp.period}</p>
+              </button>
 
-            {/* Certifications */}
-            <div>
-              <h3 className="flex items-center gap-2 text-2xl font-semibold text-gray-900 mb-6">
-                <Award className="h-6 w-6 text-blue-600" />
-                Certifications
-              </h3>
-              <div className="space-y-3">
-                {certifications.map((cert, index) => (
-                  <div key={index} className="flex items-center gap-3 bg-gray-50 rounded-lg p-4">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-gray-700">{cert}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Experience */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="flex items-center gap-2 text-2xl font-semibold text-gray-900 mb-6">
-                <Briefcase className="h-6 w-6 text-blue-600" />
-                Work Experience
-              </h3>
-              {experience.map((exp, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6 mb-4">
-                  <h4 className="font-semibold text-lg text-gray-900">{exp.title}</h4>
-                  <p className="text-blue-600 font-medium">{exp.company}</p>
-                  <p className="text-gray-600 mb-3">{exp.period}</p>
+              {openIndex === i && (
+                <div className="px-6 pb-6">
                   <ul className="space-y-2">
-                    {exp.responsibilities.map((resp, i) => (
-                      <li key={i} className="text-gray-700 text-sm flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                        {resp}
+                    {exp.responsibilities.map((resp, j) => (
+                      <li key={j} className="text-gray-700 text-sm flex gap-2">
+                        <span className="text-blue-600">•</span> {resp}
                       </li>
                     ))}
                   </ul>
                 </div>
-              ))}
+              )}
             </div>
+          ))}
+        </div>
+      </div>
+    </div>
 
-            {/* Skills */}
-            <div>
-              <h3 className="flex items-center gap-2 text-2xl font-semibold text-gray-900 mb-6">
-                <Code className="h-6 w-6 text-blue-600" />
-                Technical Skills
-              </h3>
-              <div className="space-y-4">
-                {Object.entries(skills).map(([category, skillList]) => (
-                  <div key={category} className="bg-gray-50 rounded-lg p-4">
-                    <h4 className="font-medium text-gray-900 mb-3">{category}</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {skillList.map((skill, i) => (
-                        <span key={i} className="bg-white border border-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+    {/* ROW 2 — CERTIFICATIONS & SKILLS */}
+    <div className="grid lg:grid-cols-2 gap-16">
+
+      {/* Certifications */}
+      <div>
+        <h3 className="flex items-center gap-3 text-2xl font-semibold mb-6">
+          <Award className="text-blue-600" /> Certifications
+        </h3>
+        <div className="space-y-3">
+          {certifications.map((cert, i) => (
+            <div key={i} className="flex items-start gap-3 p-4 rounded-lg bg-white border border-gray-100 shadow-sm">
+              <div className="w-2 h-2 mt-2 rounded-full bg-blue-600"></div>
+              <span className="text-gray-700 text-sm">{cert}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Skills */}
+      <div>
+        <h3 className="flex items-center gap-3 text-2xl font-semibold mb-6">
+          <Code className="text-blue-600" /> Technical Skills
+        </h3>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {Object.entries(skills).map(([category, list]) => (
+            <div key={category} className="p-5 rounded-xl bg-white border border-gray-100 shadow-sm">
+              <h4 className="font-semibold text-gray-900 mb-3">{category}</h4>
+              <div className="flex flex-wrap gap-2">
+                {list.map((skill, i) => (
+                  <span key={i} className="text-xs bg-blue-50 text-blue-700 px-3 py-1 rounded-full font-medium">
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
-    </section>
+
+    </div>
+  </div>
+</section>
+
   );
 };
 

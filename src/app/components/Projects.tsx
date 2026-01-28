@@ -2,140 +2,188 @@ import { ExternalLink, Github, Eye } from "lucide-react";
 
 const Projects = () => {
   const projects = [
+   {
+  title: "Advateck Engineering Website",
+  description:
+    " Developed a modern corporate website for Advateck, showcasing their capabilities, products, and makes it easy for clients to connect.",
+  technologies: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
+  image:
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&h=300&fit=crop",
+  github: null,
+  live: "https://www.advateck.co.ke/",
+  features: [
+    "Company profile highlighting Products and services",
+    "Product and service showcase .",
+    "Clear communication channels for client inquiries and project requests",
+  
+  ],
+},
+
     {
-      title: "Mula Social Investments",
-      description: "Designed and implemented a digital wallet solution tailored to the needs of Mula Social Investments, enabling individuals and businesses to manage finances, grow savings, and reinvest effectively.",
-      technologies: ["React", "Node.js", "MongoDB", "Daraja API", "JWT", "bcrypt"],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
-      github: "https://www.mulagroups.com/",
+      title: "Digital Wallet – Mula Social Investments",
+      description:
+        "Built a digital wallet platform enabling users to manage funds, track financial activity, and support savings and reinvestment initiatives.",
+      technologies: ["React", "Node.js", "REST APIs", "PostgreSQL"],
+      image:
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
+      github: null,
       live: "https://www.mulagroups.com/",
       features: [
-        "Secure payment processing with Mpesa",
-        "Financial tracking and reporting functions",
-        "Enhancing operational efficiency and financial management",
-        "Encrypted user data storage"
-      ]
+        "Wallet management and financial tracking",
+        "Digital payments integration",
+        "User-friendly financial dashboard",
+        "Improved operational efficiency for users",
+      ],
     },
     {
-      title: "Bariki Fundraising Platform",
-      description: "A decentralized fundraising platform that utilizes Algorand crypto currency for secure, transparent transactions. ",
-      technologies: ["Python", "Powershell", "JavaScript", "Algorand Blockchain"],
-      image: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      title: "Bariki Decentralized Fundraising Platform",
+      description:
+        "A blockchain-based fundraising platform built during the Algorand Hackathon to enable secure and transparent digital donations.",
+      technologies: ["JavaScript", "Algorand Blockchain", "Smart Contracts"],
+      image:
+        "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=500&h=300&fit=crop",
       github: "https://github.com/SenZmaKi/Bariki",
       live: null,
       features: [
-        "Donating and managing funds efficiently",
-        "leveraging block chain technology to ensure trust and accountability in fundraising processes"
-       
-      ]
+        "Transparent and traceable donations",
+        "Blockchain-secured transactions",
+        "Decentralized fundraising model",
+      ],
     },
     {
-      title: "Music-Interactive LED Strip with Arduino",
-      description: "An LED strip that synchronizes light patterns with music using an Arduino microcontroller.",
-      technologies: ["React", "Service Workers", "IndexedDB", "Socket.io", "Express", "PostgreSQL"],
-      image: "https://images.unsplash.com/photo-1603732551658-5fabbafa84eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXJkdWlub3xlbnwwfHwwfHx8MA%3D%3D",
-      github: "https://github.com/gathei-iraki/music-reactive-LED-strip-with-arduino",
-      live: "https://github.com/gathei-iraki/music-reactive-LED-strip-with-arduino",
+      title: "Uadilifu Plagiarism Detector",
+      description:
+        "A document similarity detection tool using TF-IDF algorithms to identify potential plagiarism across text sources.",
+      technologies: ["Python", "TF-IDF", "Natural Language Processing"],
+      image:
+        "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=500&h=300&fit=crop",
+      github: "https://github.com/gathei-iraki/PLagiarism-Detector-using-TF-IDF",
+      live: null,
       features: [
-        "Creating dynamic lighting effects that respond to audio input."
-      ]
-    }
+        "Text similarity analysis",
+        "TF-IDF based document comparison",
+        "Highlights potential plagiarism instances",
+      ],
+    },
+    {
+      title: "POS System – Buchana Industries",
+      description:
+        "Custom-built Point-of-Sale system for sales tracking, inventory management, and automated reporting.",
+      technologies: ["Microsoft Access", "Database Design", "SQL"],
+      image:
+        "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=500&h=300&fit=crop",
+      github: null,
+      live: null,
+      features: [
+        "Sales and inventory tracking",
+        "Automated reporting system",
+        "Custom database-driven workflows",
+      ],
+    },
+    {
+      title: "Music-Reactive LED Strip (Arduino)",
+      description:
+        "An embedded systems project where LED lighting effects synchronize with live music input using signal processing.",
+      technologies: ["Arduino", "C++", "Signal Processing"],
+      image:
+        "https://images.unsplash.com/photo-1603732551658-5fabbafa84eb?w=500&h=300&fit=crop",
+      github: "https://github.com/gathei-iraki/music-reactive-LED-strip-with-arduino",
+      live: null,
+      features: [
+        "Audio-reactive lighting effects",
+        "Microcontroller-based programming",
+        "Real-time signal processing",
+      ],
+    },
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
-          <p className="text-xl text-gray-600">Showcasing my technical skills and creativity</p>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+          <p className="text-gray-600 text-lg">
+            A selection of work showcasing my expertise in web, cloud, and software development
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="relative group">
+            <div
+              key={index}
+              className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col"
+            >
+              <div className="relative overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-4">
                   {project.live && (
                     <a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-white text-gray-900 p-2 rounded-full hover:bg-gray-100 transition-colors"
+                      className="bg-white p-2 rounded-full hover:scale-110 transition"
                     >
-                      <Eye className="h-5 w-5" />
+                      <Eye className="h-5 w-5 text-gray-900" />
                     </a>
                   )}
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white text-gray-900 p-2 rounded-full hover:bg-gray-100 transition-colors"
-                  >
-                    <Github className="h-5 w-5" />
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white p-2 rounded-full hover:scale-110 transition"
+                    >
+                      <Github className="h-5 w-5 text-gray-900" />
+                    </a>
+                  )}
                   {project.live && (
                     <a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-white text-gray-900 p-2 rounded-full hover:bg-gray-100 transition-colors"
+                      className="bg-white p-2 rounded-full hover:scale-110 transition"
                     >
-                      <ExternalLink className="h-5 w-5" />
+                      <ExternalLink className="h-5 w-5 text-gray-900" />
                     </a>
                   )}
                 </div>
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{project.title}</h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4 flex-grow">
+                  {project.description}
+                </p>
 
                 <div className="mb-4">
-                  <h4 className="text-sm font-medium text-gray-900 mb-2">Key Features:</h4>
+                  <h4 className="text-sm font-semibold text-gray-900 mb-2">
+                    Key Highlights
+                  </h4>
                   <ul className="space-y-1">
                     {project.features.map((feature, i) => (
-                      <li key={i} className="text-sm text-gray-600 flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <li key={i} className="text-sm text-gray-600 flex gap-2">
+                        <span className="text-blue-600 mt-1">•</span>
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mt-auto">
                   {project.technologies.map((tech, i) => (
-                    <span key={i} className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-medium">
+                    <span
+                      key={i}
+                      className="bg-blue-50 text-blue-700 text-xs font-medium px-3 py-1 rounded-full"
+                    >
                       {tech}
                     </span>
                   ))}
-                </div>
-
-                <div className="flex gap-3">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    <Github className="h-4 w-4" />
-                    <span className="text-sm">Code</span>
-                  </a>
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                      <span className="text-sm">Live Demo</span>
-                    </a>
-                  )}
                 </div>
               </div>
             </div>
