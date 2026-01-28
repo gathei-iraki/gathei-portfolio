@@ -162,7 +162,7 @@ const Resume = () => {
     "Frontend": ["React", "Next.js", "Tailwind CSS"],
     "Backend": [ "Express.js", "REST APIs"],
     "Cloud": ["AWS", "Azure"],
-    "Power Platform": ["Power Apps", "Power Automate", "Power BI", "Power Pages"],
+    "Power Platform": ["Power Apps", "Power Automate", "Power BI"],
     "Databases": ["PostgreSQL", "MySQL"],
   };
 
@@ -195,29 +195,16 @@ const Resume = () => {
           </p>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12 max-w-3xl mx-auto">
             <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
-              <Counter end={5} label="Years Experience" />
+              <Counter end={3} label="Years Experience" />
             </div>
+           
             <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
-              <Counter end={15} label="Projects Built" />
-            </div>
-            <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
-              <Counter end={6} label="Certifications" />
+              <Counter end={5} label="Certifications" />
             </div>
           </div>
 
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            href="/Silvia-Gathei-CV.pdf"
-            download
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-          >
-            <Download size={20} />
-            <span className="font-semibold">Download CV</span>
-            <ExternalLink size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-          </motion.a>
         </motion.div>
 
         {/* Education & Experience Tabs for Mobile */}

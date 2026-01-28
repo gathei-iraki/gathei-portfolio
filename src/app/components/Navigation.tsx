@@ -11,7 +11,7 @@ const Navigation = () => {
     { id: "home", label: "Home" },
     { id: "resume", label: "Resume" },
     { id: "projects", label: "Projects" },
-    { id: "challenges", label: "Lab Challenges" },
+    { id: "impact", label: "Impact" },
     { id: "contact", label: "Contact" },
   ];
 
@@ -51,7 +51,7 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <span className="text-xl font-bold text-gray-900">Portfolio</span>
+            <span className="text-xl font-bold text-gray-900">Silvia Gathei Portfolio</span>
           </div>
           
           {/* Desktop Navigation */}

@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 relative">
+    <section id="home" className="min-h-screen flex items-center justify-center mt-8 bg-gradient-to-br from-blue-50 to-indigo-100 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
           {/* Profile Image */}
@@ -28,10 +28,8 @@ const Hero = () => {
           </div>
 
           {/* Name and Title */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-blue-600 mb-6">
               Silvia Gathei
-            </span>
           </h1>
 
           <h2 className="text-xl sm:text-2xl lg:text-3xl text-gray-700 mb-8 font-light">
